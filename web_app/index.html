@@ -3,28 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MHD Simulátor</title>
+    <title>MHD Simulátor – skutečné dopravní podniky</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app">
+    <div class="app-shell">
       <header class="topbar">
-        <h1>MHD Simulátor</h1>
+        <div>
+          <p class="eyebrow">Simulátor městské dopravy</p>
+          <h1>MHD hlásič zastávek a kasa</h1>
+        </div>
         <div class="status-pill" id="routeStatus">V provozu</div>
       </header>
 
       <main class="layout">
         <section class="panel main-panel">
-          <div class="bus-card">
+          <div class="controls-grid">
+            <label>
+              Dopravní podnik
+              <select id="operatorSelect"></select>
+            </label>
+            <label>
+              Linka
+              <select id="routeSelect"></select>
+            </label>
+          </div>
+
+          <div class="bus-card" id="busCard">
             <div class="bus-header">
-              <span>Autobus</span>
-              <span id="directionBadge">Směr: vpřed</span>
+              <span id="operatorBadge">DP Ostrava</span>
+              <span id="routeBadge">Linka 20</span>
             </div>
 
             <div class="bus-body">
               <div class="route-display">
                 <label>Aktuální zastávka</label>
-                <h2 id="currentStop">Náměstí</h2>
+                <h2 id="currentStop">Náměstí Republiky</h2>
               </div>
 
               <div class="info-row">
@@ -49,7 +63,7 @@
           <div class="announcer">
             <h3>Hlásič zastávek</h3>
             <div id="announcerText">
-              Vítejte v autobuse. Příští zastávka: Náměstí.
+              Vítejte v autobuse. Příští zastávka: Náměstí Republiky.
             </div>
           </div>
         </section>
@@ -65,6 +79,7 @@
                 <option value="normal">Běžná</option>
                 <option value="student">Student</option>
                 <option value="monthly">Měsíční</option>
+                <option value="reduced">Zlevněná</option>
               </select>
             </div>
 
@@ -80,6 +95,10 @@
             <div class="stat-item">
               <span>Výnos</span>
               <strong id="revenue">0 Kč</strong>
+            </div>
+            <div class="stat-item">
+              <span>Vozidlo</span>
+              <strong id="vehicleName">Bus 20</strong>
             </div>
           </div>
 
