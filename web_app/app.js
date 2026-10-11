@@ -5,9 +5,14 @@ const operatorData = {
     bus: 'Bus 20',
     color: '#1d4ed8',
     routes: {
-      '20': ['Náměstí Republiky', 'Hlavní nádraží', 'Moravská Ostrava', 'Muzeum', 'Slezská', 'Vítkovice', 'Poruba', 'Černá louka'],
-      '30': ['Kosmonautů', 'Hlavní nádraží', 'Přívoz', 'Nová Valašská', 'Mírové náměstí', 'Borská', 'Muglinov'],
-      '52': ['Dolní Vítkovice', 'Vítkovice', 'Fifejdy', 'Slezská', 'Černá louka', 'Přívoz', 'Nádražní']
+      '20': {
+        stops: ['Náměstí Republiky', 'Hlavní nádraží', 'Moravská Ostrava', 'Muzeum', 'Slezská', 'Vítkovice', 'Poruba', 'Černá louka'],
+        schedule: ['05:40', '06:15', '06:55', '07:35', '08:15', '09:00', '09:50', '10:35']
+      },
+      '30': {
+        stops: ['Kosmonautů', 'Hlavní nádraží', 'Přívoz', 'Nová Valašská', 'Mírové náměstí', 'Borská', 'Muglinov'],
+        schedule: ['05:50', '06:30', '07:20', '08:10', '09:00', '09:50', '10:40']
+      }
     }
   },
   usti: {
@@ -16,9 +21,14 @@ const operatorData = {
     bus: 'Bus 3',
     color: '#f59e0b',
     routes: {
-      '1': ['Náměstí Republiky', 'Větrník', 'Muzeum', 'Kostelní náměstí', 'Nádražní', 'Předměstí', 'Krupka'],
-      '2': ['Město', 'Základní škola', 'Lužické náměstí', 'Pohled', 'Koryto', 'Jeskyně', 'Hrad'],
-      '8': ['Ústí centrum', 'Větrník', 'Hasina', 'Sídliště', 'Lesní cesta', 'Velké náměstí']
+      '1': {
+        stops: ['Náměstí Republiky', 'Větrník', 'Muzeum', 'Kostelní náměstí', 'Nádražní', 'Předměstí', 'Krupka'],
+        schedule: ['05:45', '06:20', '07:00', '07:45', '08:35', '09:20', '10:10']
+      },
+      '2': {
+        stops: ['Město', 'ZŠ', 'Lužické náměstí', 'Pohled', 'Koryto', 'Hrad'],
+        schedule: ['06:00', '06:45', '07:35', '08:25', '09:15', '10:05']
+      }
     }
   },
   decin: {
@@ -27,9 +37,14 @@ const operatorData = {
     bus: 'Bus 5',
     color: '#16a34a',
     routes: {
-      '1': ['Nádražní', 'Městské divadlo', 'Dlouhá', 'Podhorská', 'Děčínský park', 'Březiny'],
-      '2': ['Lábská', 'Křemencová', 'Kostelní náměstí', 'Náměstí', 'Černý vrch', 'Městská nemocnice'],
-      '10': ['Botanická', 'Kostelní', 'Děčín centrum', 'Křižovatka', 'Vltava', 'Česká']
+      '1': {
+        stops: ['Nádražní', 'Městské divadlo', 'Dlouhá', 'Podhorská', 'Děčínský park', 'Březiny'],
+        schedule: ['05:55', '06:35', '07:20', '08:10', '09:00', '09:50']
+      },
+      '2': {
+        stops: ['Lábská', 'Křemencová', 'Kostelní náměstí', 'Náměstí', 'Městská nemocnice'],
+        schedule: ['06:10', '06:55', '07:45', '08:35', '09:30']
+      }
     }
   },
   liberec: {
@@ -38,9 +53,30 @@ const operatorData = {
     bus: 'Bus 1',
     color: '#7c3aed',
     routes: {
-      '1': ['Centrum', 'Městský park', 'Nádražní', 'Jablonecká', 'Lidická', 'Kříž', 'Riegrova'],
-      '2': ['Liberec hlavní', 'Nábřeží', 'Nové Město', 'Sokolovská', 'Křižovatka', 'Vratislavice'],
-      '5': ['Muzeum', 'Kostel', 'U školy', 'Kruh', 'Vesnice', 'Hřbitov', 'Lomnice']
+      '1': {
+        stops: ['Centrum', 'Městský park', 'Nádražní', 'Jablonecká', 'Kříž', 'Riegrova'],
+        schedule: ['05:35', '06:20', '07:10', '08:00', '08:50', '09:40']
+      },
+      '2': {
+        stops: ['Liberec hlavní', 'Nábřeží', 'Nové Město', 'Sokolovská', 'Křižovatka', 'Vratislavice'],
+        schedule: ['05:50', '06:35', '07:25', '08:15', '09:05', '10:00']
+      }
+    }
+  },
+  arriva: {
+    name: 'ARRIVA MORAVA',
+    short: 'ARRIVA',
+    bus: 'Bus 204',
+    color: '#dc2626',
+    routes: {
+      '204': {
+        stops: ['Olomouc, Hlavní nádraží', 'Cyrilometodějská', 'Smetanova', 'Náměstí 8. května', 'Univerzitní kampus', 'Přerovská', 'Křelov'],
+        schedule: ['05:45', '06:20', '07:05', '08:00', '08:50', '09:40', '10:30']
+      },
+      '210': {
+        stops: ['Brno, Ústřední nádraží', 'Kobližná', 'Křenová', 'Sokolská', 'Slatina', 'Mladá Boleslavská', 'Přízřenice'],
+        schedule: ['06:00', '06:50', '07:40', '08:30', '09:20', '10:10', '11:00']
+      }
     }
   }
 };
@@ -61,7 +97,8 @@ const state = {
   running: true,
   cash: 0,
   passengerCount: 0,
-  log: []
+  log: [],
+  clockMinutes: 6 * 60
 };
 
 const operatorSelect = document.getElementById('operatorSelect');
@@ -79,6 +116,8 @@ const operatorBadgeEl = document.getElementById('operatorBadge');
 const routeBadgeEl = document.getElementById('routeBadge');
 const busCardEl = document.getElementById('busCard');
 const vehicleNameEl = document.getElementById('vehicleName');
+const scheduleListEl = document.getElementById('scheduleList');
+const clockDisplayEl = document.getElementById('clockDisplay');
 
 function getActiveRoute() {
   return operatorData[state.operator].routes[state.routeKey];
@@ -88,10 +127,15 @@ function formatMoney(value) {
   return `${value} Kč`;
 }
 
+function formatClock(minutes) {
+  const h = Math.floor(minutes / 60) % 24;
+  const m = minutes % 60;
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+}
+
 function addLog(message) {
   state.log.unshift(message);
   if (state.log.length > 8) state.log.pop();
-
   logListEl.innerHTML = state.log.map((item) => `<li>${item}</li>`).join('');
 }
 
@@ -114,8 +158,17 @@ function populateRoutes() {
   routeSelect.value = state.routeKey;
 }
 
+function renderSchedule() {
+  const route = getActiveRoute();
+  const departures = route.schedule || [];
+  scheduleListEl.innerHTML = departures
+    .map((time) => `<li>${time}</li>`)
+    .join('');
+}
+
 function updateRouteState() {
   const operator = operatorData[state.operator];
+  const route = getActiveRoute();
   state.currentIndex = 0;
   state.direction = 1;
   state.doorsOpen = false;
@@ -125,17 +178,19 @@ function updateRouteState() {
   operatorBadgeEl.textContent = operator.short;
   vehicleNameEl.textContent = operator.bus;
   busCardEl.dataset.operator = state.operator;
+  state.clockMinutes = 6 * 60;
 
   announce(`Vítejte v dopravě ${operator.name}. Linka ${state.routeKey} je připravena k jízdě.`);
   addLog(`${operator.name} – linka ${state.routeKey} byla aktivována.`);
+  renderSchedule();
   updateView();
 }
 
 function updateView() {
   const route = getActiveRoute();
-  const currentStop = route[state.currentIndex];
+  const currentStop = route.stops[state.currentIndex];
   const nextIndex = state.currentIndex + state.direction;
-  const nextStop = nextIndex >= 0 && nextIndex < route.length ? route[nextIndex] : route[0];
+  const nextStop = nextIndex >= 0 && nextIndex < route.stops.length ? route.stops[nextIndex] : route.stops[0];
 
   currentStopEl.textContent = currentStop;
   nextStopEl.textContent = nextStop;
@@ -146,6 +201,7 @@ function updateView() {
   routeStatusEl.textContent = state.running ? 'V provozu' : 'Zastaveno';
   routeBadgeEl.textContent = `Linka ${state.routeKey}`;
   operatorBadgeEl.textContent = operatorData[state.operator].short;
+  clockDisplayEl.textContent = formatClock(state.clockMinutes);
 }
 
 function nextStop() {
@@ -156,17 +212,18 @@ function nextStop() {
   }
 
   const nextIndex = state.currentIndex + state.direction;
-  if (nextIndex < 0 || nextIndex >= route.length) {
+  if (nextIndex < 0 || nextIndex >= route.stops.length) {
     state.direction *= -1;
     addLog('Konec trasy, směr se mění.');
   }
 
   state.currentIndex += state.direction;
   if (state.currentIndex < 0) state.currentIndex = 0;
-  if (state.currentIndex >= route.length) state.currentIndex = route.length - 1;
+  if (state.currentIndex >= route.stops.length) state.currentIndex = route.stops.length - 1;
 
+  state.clockMinutes += 6;
   state.passengerCount += 2;
-  const currentStop = route[state.currentIndex];
+  const currentStop = route.stops[state.currentIndex];
   const operatorName = operatorData[state.operator].name;
 
   announce(`${operatorName}, linka ${state.routeKey}. Příští zastávka: ${currentStop}. Vystupujte a nastupujte, prosím.`);
@@ -205,7 +262,8 @@ function sellTicket() {
 
 operatorSelect.addEventListener('change', (event) => {
   state.operator = event.target.value;
-  state.routeKey = Object.keys(operatorData[state.operator].routes)[0];
+  const keys = Object.keys(operatorData[state.operator].routes);
+  state.routeKey = keys[0];
   populateRoutes();
   updateRouteState();
 });

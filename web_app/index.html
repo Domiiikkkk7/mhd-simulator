@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MHD Simulátor – skutečné dopravní podniky</title>
+    <title>MHD Simulátor – dopravní podniky</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -13,7 +13,10 @@
           <p class="eyebrow">Simulátor městské dopravy</p>
           <h1>MHD hlásič zastávek a kasa</h1>
         </div>
-        <div class="status-pill" id="routeStatus">V provozu</div>
+        <div class="topbar-meta">
+          <div class="status-pill" id="routeStatus">V provozu</div>
+          <div class="time-pill" id="clockDisplay">06:00</div>
+        </div>
       </header>
 
       <main class="layout">
@@ -100,6 +103,11 @@
               <span>Vozidlo</span>
               <strong id="vehicleName">Bus 20</strong>
             </div>
+          </div>
+
+          <div class="schedule-box">
+            <h3>Jízdní řád</h3>
+            <ul id="scheduleList"></ul>
           </div>
 
           <div class="log-box">
