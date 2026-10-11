@@ -1,4 +1,2 @@
-pygame==2.5.2
-python-dateutil==2.8.2
-click==8.1.7
-Pillow==10.0.0
+# No extra Python packages required for the Tkinter desktop app.
+# Optional future upgrade: pygame==2.5.2

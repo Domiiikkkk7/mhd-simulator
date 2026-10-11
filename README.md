@@ -1,48 +1,77 @@
-# MHD Simulátor - Hlásič Zastávek a Kasa
+# MHD Simulátor
 
-Realistický simulátor městské hromadné dopravy s grafickým rozhraním postavený na Pygame.
+Tento projekt obsahuje dva simulátory MHD:
 
-## Funkce
-
-- 🚌 **Hlásič zastávek** - zvukový a vizuální systém
-- 💳 **Interaktivní kasa** - nákup jízdenek, platby
-- 📍 **Jízdní řád** - více tras, různé zastávky
-- 🎨 **Grafické rozhraní** - simulátor kabiny vozidla
-- 📊 **Statistika** - sledování cestujících a výnosů
-- ⏰ **Real-time čas** - reálné jízdní doby
-
-## Instalace
-
-```bash
-pip install -r requirements.txt
-python main.py
-```
-
-## Řídící klávesy
-
-- **MEZERNÍK** - Příště zastávka
-- **K** - Otevřít/zavřít dveře
-- **P** - Pauza
-- **ESC** - Konec
-- **M** - Otevřít menu
+1. Python desktopový simulátor s grafickým rozhraním (Tkinter)
+2. Webový simulátor v HTML/CSS/JavaScript
 
 ## Struktura projektu
 
-```
+```text
 .
-├── main.py              # Hlavní aplikace
-├── bus.py               # Logika vozidla
-├── route.py             # Definice tras a zastávek
-├── announcer.py         # Hlásič zastávek
-├── cashier.py           # Systém kasy
-├── ui/
-│   ├── display.py       # Vykreslování displeje
-│   ├── keyboard.py      # Zpracování vstupů
-│   └── fonts/           # Fonty a grafika
-└── data/
-    ├── routes.json      # Konfigurace tras
-    └── timetable.json   # Jízdní řád
+├── README.md
+├── requirements.txt
+├── python_app/
+│   ├── main.py
+│   ├── app.py
+│   └── __init__.py
+├── web_app/
+│   ├── index.html
+│   ├── styles.css
+│   └── app.js
+└── .gitignore
 ```
+
+## 1) Python desktopová aplikace
+
+Spuštění:
+
+```bash
+cd python_app
+python main.py
+```
+
+Funkce:
+- hlásič zastávek s textovým a logovým výstupem
+- simulace trasy a přepínání zastávek
+- otevření dveří a výpis „Následující zastávka…“
+- kasa pro prodej jízdenek
+- záznam výnosů a historie provozu
+
+## 2) Webová aplikace
+
+Spuštění:
+
+```bash
+cd web_app
+python -m http.server 8000
+```
+
+Poté otevřete v prohlížeči adresu:
+
+```text
+http://localhost:8000
+```
+
+Funkce:
+- dynamický hlásič zastávek
+- přehled trasy a vozidla
+- prodej jízdenek a evidence výnosů
+- přepínání směru a simulace jízdy
+
+## Ovládání webové verze
+
+- `Následující zastávka` – posune autobus na další zastávku
+- `Otevřít dveře` – přepne dveře
+- `Běžný` / `Student` / `Měsíční` – prodej jízdenek
+- `Stop` – zastaví simulaci
+
+## Ovládání Python verze
+
+- `Další zastávka` – simulace posunu vozu
+- `Otevřít dveře` / `Zavřít dveře` – ovládání dveří
+- `Prodej jízdenky` – otevře výběr jízdenky
+- `Stop` – pozastaví běh
 
 ## Autor
 

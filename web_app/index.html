@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MHD Simulátor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <h1>MHD Simulátor</h1>
+        <div class="status-pill" id="routeStatus">V provozu</div>
+      </header>
+
+      <main class="layout">
+        <section class="panel main-panel">
+          <div class="bus-card">
+            <div class="bus-header">
+              <span>Autobus</span>
+              <span id="directionBadge">Směr: vpřed</span>
+            </div>
+
+            <div class="bus-body">
+              <div class="route-display">
+                <label>Aktuální zastávka</label>
+                <h2 id="currentStop">Náměstí</h2>
+              </div>
+
+              <div class="info-row">
+                <div>
+                  <small>Dveře</small>
+                  <strong id="doorsState">Zavřeno</strong>
+                </div>
+                <div>
+                  <small>Další zastávka</small>
+                  <strong id="nextStop">Hlavní nádraží</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="nextStopBtn">Následující zastávka</button>
+            <button id="doorBtn">Otevřít dveře</button>
+            <button id="toggleRunBtn">Stop</button>
+          </div>
+
+          <div class="announcer">
+            <h3>Hlásič zastávek</h3>
+            <div id="announcerText">
+              Vítejte v autobuse. Příští zastávka: Náměstí.
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel side-panel">
+          <div class="cash-box">
+            <h3>Kasa</h3>
+            <div class="money" id="cashValue">0 Kč</div>
+
+            <div class="ticket-selector">
+              <label for="ticketType">Typ jízdenky</label>
+              <select id="ticketType">
+                <option value="normal">Běžná</option>
+                <option value="student">Student</option>
+                <option value="monthly">Měsíční</option>
+              </select>
+            </div>
+
+            <button id="sellTicketBtn">Prodat jízdenku</button>
+          </div>
+
+          <div class="stats-box">
+            <h3>Statistiky</h3>
+            <div class="stat-item">
+              <span>Cestující</span>
+              <strong id="passengerCount">0</strong>
+            </div>
+            <div class="stat-item">
+              <span>Výnos</span>
+              <strong id="revenue">0 Kč</strong>
+            </div>
+          </div>
+
+          <div class="log-box">
+            <h3>Provozní záznam</h3>
+            <ul id="logList"></ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
