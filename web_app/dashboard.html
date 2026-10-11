@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MHD Simulator 2.0 – Profesionální Dashboard</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        color: #e2e8f0;
+      }
+      .app { max-width: 1400px; margin: 0 auto; padding: 20px; }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        background: rgba(15, 23, 42, 0.7);
+        border-radius: 12px;
+        padding: 16px 20px;
+        backdrop-filter: blur(10px);
+      }
+      .topbar h1 { margin: 0; font-size: 2.2rem; }
+      .meta { display: flex; align-items: center; gap: 14px; }
+      .pill {
+        border-radius: 999px;
+        padding: 10px 16px;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+      .status { background: #10b981; color: white; }
+      .time { background: #3b82f6; color: white; }
+      .layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
+      .panel {
+        background: rgba(30, 41, 59, 0.8);
+        border: 1px solid rgba(71, 85, 105, 0.3);
+        border-radius: 14px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+      }
+      .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      label {
+        display: block;
+        color: #94a3b8;
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+      }
+      select, button {
+        border-radius: 10px;
+        border: 1px solid rgba(148, 163, 184, 0.3);
+        padding: 10px 12px;
+        font: inherit;
+        background: rgba(15, 23, 42, 0.5);
+        color: #e2e8f0;
+      }
+      button {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        transition: all 0.2s;
+      }
+      button:hover { transform: translateY(-2px); filter: brightness(1.1); }
+      .bus-card {
+        background: rgba(30, 41, 59, 0.6);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(71, 85, 105, 0.3);
+      }
+      .bus-header {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 18px;
+        font-weight: 700;
+      }
+      .bus-body { padding: 18px; }
+      .route-display { margin-bottom: 16px; }
+      .route-display label { margin-bottom: 6px; }
+      .route-display h2 { margin: 0; font-size: 2rem; }
+      .info-row {
+        display: flex;
+        gap: 14px;
+      }
+      .info-row > div {
+        flex: 1;
+        background: rgba(15, 23, 42, 0.5);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 10px;
+        padding: 12px;
+      }
+      .action-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .announcer {
+        background: rgba(234, 179, 8, 0.1);
+        border: 1px solid rgba(234, 179, 8, 0.3);
+        border-radius: 12px;
+        padding: 14px;
+        margin-top: 20px;
+      }
+      #announcerText {
+        background: rgba(15, 23, 42, 0.6);
+        border-radius: 8px;
+        padding: 12px;
+        color: #fbbf24;
+        line-height: 1.5;
+        min-height: 80px;
+      }
+      .cash-box, .stats-box, .schedule-box, .log-box {
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(71, 85, 105, 0.3);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+      .money {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #10b981;
+        margin-bottom: 12px;
+      }
+      .stat-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        padding: 10px 0;
+        color: #cbd5e1;
+      }
+      .stat-item:last-child { border-bottom: none; }
+      ul { margin: 0; padding-left: 18px; color: #94a3b8; }
+      li { margin-bottom: 6px; }
+      .passengers-visual {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+        gap: 6px;
+        margin-top: 12px;
+      }
+      .passenger {
+        aspect-ratio: 1;
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+      @media (max-width: 1000px) {
+        .layout { grid-template-columns: 1fr; }
+        .action-controls { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <h1>🚌 MHD Simulator 2.0</h1>
+        </div>
+        <div class="meta">
+          <div class="pill status" id="routeStatus">V provozu</div>
+          <div class="pill time" id="clockDisplay">06:00</div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel">
+          <div class="controls">
+            <label>
+              Dopravce
+              <select id="operatorSelect"></select>
+            </label>
+            <label>
+              Linka
+              <select id="routeSelect"></select>
+            </label>
+          </div>
+
+          <div class="bus-card">
+            <div class="bus-header">
+              <span id="operatorBadge">Dopravce</span>
+              <span id="routeBadge">Linka</span>
+            </div>
+            <div class="bus-body">
+              <div class="route-display">
+                <label>Aktuální zastávka</label>
+                <h2 id="currentStop">Náměstí</h2>
+              </div>
+              <div class="info-row">
+                <div>
+                  <small>Dveře</small>
+                  <strong id="doorsState">Zavřeno</strong>
+                </div>
+                <div>
+                  <small>Cestující v autobuse</small>
+                  <strong id="passengersInBus">0</strong>
+                </div>
+                <div>
+                  <small>Další zastávka</small>
+                  <strong id="nextStop">Další</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-controls">
+            <button id="nextStopBtn">⏭ Další zastávka</button>
+            <button id="doorBtn">🚪 Dveře</button>
+            <button id="toggleRunBtn" style="background: linear-gradient(135deg, #10b981, #059669);">▶ Start</button>
+          </div>
+
+          <div class="announcer">
+            <h3>📢 Hlásič zastávek</h3>
+            <div id="announcerText">
+              Vítejte v autobuse.
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <div class="cash-box">
+            <h3>💰 Kasa</h3>
+            <div class="money" id="cashValue">0 Kč</div>
+            <label>
+              Typ jízdenky
+              <select id="ticketType">
+                <option value="normal">Běžná</option>
+                <option value="student">Student</option>
+                <option value="reduced">Zlevněná</option>
+                <option value="monthly">Měsíční</option>
+              </select>
+            </label>
+            <button id="sellTicketBtn" style="margin-top: 10px;">Prodat jízdenku</button>
+          </div>
+
+          <div class="stats-box">
+            <h3>📊 Statistiky</h3>
+            <div class="stat-item">
+              <span>Celk. cestující</span>
+              <strong id="totalPassengers">0</strong>
+            </div>
+            <div class="stat-item">
+              <span>V autobuse</span>
+              <strong id="inBusCount">0</strong>
+            </div>
+            <div class="stat-item">
+              <span>Výnos</span>
+              <strong id="revenue">0 Kč</strong>
+            </div>
+            <div class="stat-item">
+              <span>Vozidlo</span>
+              <strong id="vehicleName">Bus</strong>
+            </div>
+          </div>
+
+          <div class="schedule-box">
+            <h3>⏱ Jízdní řád</h3>
+            <ul id="scheduleList"></ul>
+          </div>
+
+          <div class="log-box">
+            <h3>📝 Provozní záznam</h3>
+            <ul id="logList"></ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
