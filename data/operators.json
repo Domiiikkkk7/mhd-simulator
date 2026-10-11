@@ -13,44 +13,290 @@
           "number": "R1",
           "name": "Praha – Brno – Ostrava",
           "direction": "vpřed",
-          "stops": [
-            "Praha hlavní nádraží",
-            "Pardubice hlavní nádraží",
-            "Česká Třebová",
-            "Brno hlavní nádraží",
-            "Přerov",
-            "Ostrava hlavní nádraží"
-          ],
+          "stops": ["Praha hlavní nádraží", "Pardubice hlavní nádraží", "Česká Třebová", "Brno hlavní nádraží", "Přerov", "Ostrava hlavní nádraží"],
           "schedule": ["06:00", "07:15", "07:50", "09:30", "10:45", "12:00"],
           "vehicleType": "train",
-          "tariffs": {
-            "normal": 200,
-            "student": 120,
-            "reduced": 100,
-            "monthly": 2500
-          }
+          "tariffs": {"normal": 200, "student": 120, "reduced": 100, "monthly": 2500}
         },
         {
           "id": "cd-r2",
           "number": "R2",
           "name": "Praha – Liberec – Děčín",
           "direction": "vpřed",
-          "stops": [
-            "Praha hlavní nádraží",
-            "Lysá nad Labem",
-            "Nymburk",
-            "Mělník",
-            "Liberec",
-            "Děčín hlavní nádraží"
-          ],
+          "stops": ["Praha hlavní nádraží", "Lysá nad Labem", "Nymburk", "Mělník", "Liberec", "Děčín hlavní nádraží"],
           "schedule": ["05:45", "06:35", "07:05", "07:35", "08:50", "09:45"],
           "vehicleType": "train",
-          "tariffs": {
-            "normal": 180,
-            "student": 110,
-            "reduced": 90,
-            "monthly": 2200
-          }
+          "tariffs": {"normal": 180, "student": 110, "reduced": 90, "monthly": 2200}
+        }
+      ]
+    },
+    {
+      "id": "arriva-stredni-cechy",
+      "name": "ARRIVA STŘEDNÍ ČECHY",
+      "shortName": "ARRIVA SC",
+      "type": "regional-bus",
+      "city": "Kolín",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "arriva-sc-1",
+          "number": "1",
+          "name": "Kolín – Nymburk – Poděbrady",
+          "direction": "vpřed",
+          "stops": ["Kolín, Autobusové nádraží", "Nymburk, Náměstí", "Poděbrady, Centrum", "Nižbor", "Konec trasy"],
+          "schedule": ["06:10", "06:55", "07:40", "08:30", "09:20"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 45, "student": 28, "reduced": 22, "monthly": 600}
+        },
+        {
+          "id": "arriva-sc-2",
+          "number": "2",
+          "name": "Kolín – Zruč nad Sázavou",
+          "direction": "vpřed",
+          "stops": ["Kolín, Autobusové nádraží", "Český Brod", "Zruč nad Sázavou", "Konec trasy"],
+          "schedule": ["06:20", "07:15", "08:10", "09:05"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 38, "student": 24, "reduced": 19, "monthly": 500}
+        }
+      ]
+    },
+    {
+      "id": "dopravni-spolecnost-usti",
+      "name": "Dopravní společnost Ústeckého kraje",
+      "shortName": "DSÚK",
+      "type": "regional-bus",
+      "city": "Ústí nad Labem",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "dsuk-1",
+          "number": "1",
+          "name": "Ústí – Teplice – Meziboří",
+          "direction": "vpřed",
+          "stops": ["Ústí nad Labem, Nádraží", "Teplice, Centrum", "Duchcov", "Meziboří", "Konec trasy"],
+          "schedule": ["06:00", "06:45", "07:30", "08:20", "09:10"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 50, "student": 30, "reduced": 25, "monthly": 700}
+        },
+        {
+          "id": "dsuk-2",
+          "number": "2",
+          "name": "Ústí – Litoměřice – Lovosice",
+          "direction": "vpřed",
+          "stops": ["Ústí nad Labem, Nádraží", "Litoměřice, Náměstí", "Lovosice", "Konec trasy"],
+          "schedule": ["06:15", "07:00", "07:50", "08:40"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 42, "student": 26, "reduced": 21, "monthly": 550}
+        }
+      ]
+    },
+    {
+      "id": "dp-chomutova-jirkova",
+      "name": "DP měst Chomutova a Jirkova",
+      "shortName": "DP CHJ",
+      "type": "city-bus",
+      "city": "Chomutov",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "dp-chj-1",
+          "number": "1",
+          "name": "Chomutov – Jirkova (městský okruh)",
+          "direction": "vpřed",
+          "stops": ["Chomutov, Náměstí", "Centrum", "Průmyslová zóna", "Jirkova, Centrum", "Sídliště", "Konec trasy"],
+          "schedule": ["05:50", "06:30", "07:15", "08:00", "08:50", "09:35"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 28, "student": 18, "reduced": 14, "monthly": 350}
+        },
+        {
+          "id": "dp-chj-2",
+          "number": "2",
+          "name": "Chomutov – průmyslová čtvrť",
+          "direction": "vpřed",
+          "stops": ["Chomutov, Nádraží", "Průmyslová", "Logistické centrum", "Konec trasy"],
+          "schedule": ["06:05", "06:50", "07:35", "08:25"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 25, "student": 16, "reduced": 12, "monthly": 300}
+        }
+      ]
+    },
+    {
+      "id": "mestska-doprava-marinske-lazne",
+      "name": "Městská doprava Mariánské Lázně",
+      "shortName": "MDML",
+      "type": "city-bus",
+      "city": "Mariánské Lázně",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "mdml-1",
+          "number": "1",
+          "name": "Mariánské Lázně – lázňský okruh",
+          "direction": "vpřed",
+          "stops": ["Hlavní nádraží", "Lázeňský okruh", "Křižíkovy sady", "Zámecký park", "Tříště", "Konec trasy"],
+          "schedule": ["06:20", "07:05", "07:50", "08:35", "09:20"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 30, "student": 20, "reduced": 15, "monthly": 400}
+        }
+      ]
+    },
+    {
+      "id": "umbrella-city-lines",
+      "name": "UMBRELLA CITY LINES",
+      "shortName": "UMBRELLA",
+      "type": "city-bus",
+      "city": "Praha",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "umbrella-1",
+          "number": "U1",
+          "name": "Praha – městské čtvrti",
+          "direction": "vpřed",
+          "stops": ["Nádraží Holešovice", "Florenc", "Andel", "Smíchov", "Černý Most", "Konec trasy"],
+          "schedule": ["06:10", "06:55", "07:40", "08:30", "09:20"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 40, "student": 25, "reduced": 18, "monthly": 1000}
+        }
+      ]
+    },
+    {
+      "id": "dpmb",
+      "name": "DPMB",
+      "shortName": "DPMB",
+      "type": "city-bus",
+      "city": "Brno",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "dpmb-1",
+          "number": "1",
+          "name": "Brno – Zábrdovice – Bystrc",
+          "direction": "vpřed",
+          "stops": ["Nádraží", "Křídlovická", "Královo Pole", "Zábrdovice", "Bystrc", "Konec trasy"],
+          "schedule": ["05:45", "06:25", "07:10", "08:00", "08:50"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 32, "student": 20, "reduced": 16, "monthly": 420}
+        },
+        {
+          "id": "dpmb-2",
+          "number": "2",
+          "name": "Brno – Bohunice – Černá Pole",
+          "direction": "vpřed",
+          "stops": ["Nádraží", "Benesova", "Bohunice", "Černá Pole", "Konec trasy"],
+          "schedule": ["06:00", "06:45", "07:30", "08:20"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 30, "student": 18, "reduced": 14, "monthly": 400}
+        }
+      ]
+    },
+    {
+      "id": "h-s-bussi",
+      "name": "H+S BUSSI",
+      "shortName": "H+S",
+      "type": "coach",
+      "city": "Jihočeský kraj",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "hs-bussi-1",
+          "number": "1",
+          "name": "České Budějovice – Český Krumlov",
+          "direction": "vpřed",
+          "stops": ["České Budějovice, Nádraží", "Zlatá Koruna", "Český Krumlov", "Konec trasy"],
+          "schedule": ["06:30", "07:30", "08:30"],
+          "vehicleType": "coach",
+          "tariffs": {"normal": 85, "student": 50, "reduced": 40, "monthly": 1000}
+        }
+      ]
+    },
+    {
+      "id": "hexibus",
+      "name": "HEXIBUS",
+      "shortName": "HEXIBUS",
+      "type": "regional-bus",
+      "city": "Plzeň",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "hexibus-1",
+          "number": "1",
+          "name": "Plzeň – Klatovy – Sušice",
+          "direction": "vpřed",
+          "stops": ["Plzeň, Nádraží", "Nepomuk", "Klatovy", "Sušice", "Konec trasy"],
+          "schedule": ["06:00", "07:15", "08:30", "09:45"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 72, "student": 45, "reduced": 36, "monthly": 900}
+        }
+      ]
+    },
+    {
+      "id": "z-group-bus",
+      "name": "Z-Group bus",
+      "shortName": "Z-Group",
+      "type": "regional-bus",
+      "city": "Žďár nad Sázavou",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "zgroup-1",
+          "number": "1",
+          "name": "Žďár nad Sázavou – Havlíčkův Brod",
+          "direction": "vpřed",
+          "stops": ["Žďár nad Sázavou, Náměstí", "Velká Bíteš", "Havlíčkův Brod", "Konec trasy"],
+          "schedule": ["06:10", "07:10", "08:10"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 58, "student": 35, "reduced": 28, "monthly": 700}
+        }
+      ]
+    },
+    {
+      "id": "poass-technologies",
+      "name": "POASS Technologies",
+      "shortName": "POASS",
+      "type": "coach",
+      "city": "Praha",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "poass-1",
+          "number": "1",
+          "name": "Praha – letiště – hotelové centra",
+          "direction": "vpřed",
+          "stops": ["Nádraží", "Letiště Václava Havla", "Sheraton", "Hilton", "Konec trasy"],
+          "schedule": ["06:00", "07:00", "08:00", "09:00"],
+          "vehicleType": "coach",
+          "tariffs": {"normal": 120, "student": 70, "reduced": 50, "monthly": 1500}
+        }
+      ]
+    },
+    {
+      "id": "mestska-doprava-teplice",
+      "name": "Městská doprava Teplice",
+      "shortName": "MDT",
+      "type": "city-bus",
+      "city": "Teplice",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "mdt-1",
+          "number": "1",
+          "name": "Teplice – městský okruh",
+          "direction": "vpřed",
+          "stops": ["Nádraží", "Náměstí", "Sídliště Jih", "Sídliště Sever", "Průmyslová", "Konec trasy"],
+          "schedule": ["05:55", "06:35", "07:20", "08:05", "08:50"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 28, "student": 18, "reduced": 14, "monthly": 360}
+        },
+        {
+          "id": "mdt-2",
+          "number": "2",
+          "name": "Teplice – Krupka",
+          "direction": "vpřed",
+          "stops": ["Nádraží", "Centrum", "Krupka, Centrum", "Konec trasy"],
+          "schedule": ["06:15", "07:10", "08:05"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 32, "student": 20, "reduced": 16, "monthly": 420}
         }
       ]
     },
@@ -67,127 +313,100 @@
           "number": "1",
           "name": "Praha – Kutná Hora",
           "direction": "vpřed",
-          "stops": [
-            "Praha, Florenc",
-            "Kolín",
-            "Česká Třebová",
-            "Kutná Hora",
-            "Sedlec",
-            "Žehuř"
-          ],
+          "stops": ["Praha, Florenc", "Kolín", "Česká Třebová", "Kutná Hora", "Sedlec", "Žehuř"],
           "schedule": ["06:00", "07:00", "07:45", "08:30", "09:15", "10:00"],
           "vehicleType": "coach",
-          "tariffs": {
-            "normal": 150,
-            "student": 90,
-            "reduced": 75,
-            "monthly": 1800
-          }
+          "tariffs": {"normal": 150, "student": 90, "reduced": 75, "monthly": 1800}
         },
         {
           "id": "icom-2",
           "number": "2",
           "name": "Praha – Česká Knínice",
           "direction": "vpřed",
-          "stops": [
-            "Praha, Hlavní nádraží",
-            "Nymburk",
-            "Poděbrady",
-            "Česká Knínice"
-          ],
+          "stops": ["Praha, Hlavní nádraží", "Nymburk", "Poděbrady", "Česká Knínice"],
           "schedule": ["06:30", "07:30", "08:30", "09:30"],
           "vehicleType": "coach",
-          "tariffs": {
-            "normal": 120,
-            "student": 75,
-            "reduced": 60,
-            "monthly": 1400
-          }
+          "tariffs": {"normal": 120, "student": 75, "reduced": 60, "monthly": 1400}
         }
       ]
     },
     {
-      "id": "car-tour",
-      "name": "CAR-TOUR",
-      "shortName": "CAR-TOUR",
+      "id": "to-europe",
+      "name": "TO EUROPE",
+      "shortName": "TO EUROPE",
       "type": "coach",
       "city": "Praha",
       "country": "CZ",
       "routes": [
         {
-          "id": "car-tour-1",
+          "id": "to-europe-1",
           "number": "1",
-          "name": "Praha – Karlovy Vary",
+          "name": "Praha – Berlín – Hamburg",
           "direction": "vpřed",
-          "stops": [
-            "Praha, Hlavní nádraží",
-            "Benešov",
-            "Příbram",
-            "Rakovník",
-            "Žatec",
-            "Karvina",
-            "Karlovy Vary"
-          ],
-          "schedule": ["06:00", "07:00", "08:00", "09:00", "10:00", "11:00", "12:00"],
+          "stops": ["Praha, Florenc", "Dresden", "Berlín", "Hamburg"],
+          "schedule": ["06:15", "09:00", "12:30"],
           "vehicleType": "coach",
-          "tariffs": {
-            "normal": 250,
-            "student": 150,
-            "reduced": 120,
-            "monthly": 3000
-          }
-        },
-        {
-          "id": "car-tour-2",
-          "number": "2",
-          "name": "Praha – Mariánské Lázně",
-          "direction": "vpřed",
-          "stops": [
-            "Praha, Hlavní nádraží",
-            "Plzeň",
-            "Stod",
-            "Mariánské Lázně"
-          ],
-          "schedule": ["06:30", "07:30", "08:45", "10:00"],
-          "vehicleType": "coach",
-          "tariffs": {
-            "normal": 200,
-            "student": 120,
-            "reduced": 100,
-            "monthly": 2400
-          }
+          "tariffs": {"normal": 500, "student": 350, "reduced": 280, "monthly": 0}
         }
       ]
     },
     {
-      "id": "pad",
-      "name": "Pražská autobusová doprava",
-      "shortName": "PAD",
+      "id": "riga-satiksme",
+      "name": "Rīgas satiksme",
+      "shortName": "Rīgas",
       "type": "city-bus",
+      "city": "Riga",
+      "country": "LV",
+      "routes": [
+        {
+          "id": "riga-1",
+          "number": "1",
+          "name": "Riga – centrs – terminālis",
+          "direction": "vpřed",
+          "stops": ["Centra stacija", "Latvijas Nacionālā bibliotēka", "Lāčplēša iela", "Iļģuciemss", "Terminālis"],
+          "schedule": ["06:10", "06:50", "07:30", "08:20", "09:10"],
+          "vehicleType": "bus",
+          "tariffs": {"normal": 45, "student": 25, "reduced": 20, "monthly": 500}
+        }
+      ]
+    },
+    {
+      "id": "cd-cargo",
+      "name": "ČD Cargo",
+      "shortName": "ČD Cargo",
+      "type": "rail",
       "city": "Praha",
       "country": "CZ",
       "routes": [
         {
-          "id": "pad-1",
-          "number": "1",
-          "name": "Praha – Kladno",
+          "id": "cd-cargo-1",
+          "number": "C1",
+          "name": "Praha – Ostrava – Katowice",
           "direction": "vpřed",
-          "stops": [
-            "Anděl",
-            "Smíchovské nádraží",
-            "Řevnice",
-            "Jesenice",
-            "Stochov",
-            "Kladno"
-          ],
-          "schedule": ["06:00", "06:45", "07:30", "08:15", "09:00", "09:45"],
+          "stops": ["Praha hlavní nádraží", "Bohumín", "Ostrava hlavní nádraží", "Katowice"],
+          "schedule": ["06:20", "08:15", "10:40"],
+          "vehicleType": "train",
+          "tariffs": {"normal": 260, "student": 150, "reduced": 130, "monthly": 0}
+        }
+      ]
+    },
+    {
+      "id": "arriva-autobusy",
+      "name": "ARRIVA autobusy",
+      "shortName": "ARRIVA",
+      "type": "regional-bus",
+      "city": "Brno",
+      "country": "CZ",
+      "routes": [
+        {
+          "id": "arriva-10",
+          "number": "10",
+          "name": "Brno – městský okruh",
+          "direction": "vpřed",
+          "stops": ["Hlavní nádraží", "Náměstí Svobody", "Koblížená", "Technologické centrum", "Městský park", "Konec trasy"],
+          "schedule": ["05:50", "06:35", "07:20", "08:05", "08:55", "09:40"],
           "vehicleType": "bus",
-          "tariffs": {
-            "normal": 90,
-            "student": 55,
-            "reduced": 45,
-            "monthly": 1000
-          }
+          "tariffs": {"normal": 32, "student": 20, "reduced": 16, "monthly": 420}
         }
       ]
     },
@@ -200,173 +419,14 @@
       "country": "CZ",
       "routes": [
         {
-          "id": "oldrich-galeja-10",
+          "id": "galeja-10",
           "number": "10",
           "name": "Jihlava – městský okruh",
           "direction": "vpřed",
-          "stops": [
-            "Náměstí",
-            "Hlavní nádraží",
-            "Muzeum",
-            "Obchodní centrum",
-            "Konec trasy"
-          ],
+          "stops": ["Náměstí", "Hlavní nádraží", "Muzeum", "Obchodní centrum", "Konec trasy"],
           "schedule": ["05:40", "06:25", "07:10", "08:00", "08:50"],
           "vehicleType": "bus",
-          "tariffs": {
-            "normal": 30,
-            "student": 20,
-            "reduced": 15,
-            "monthly": 350
-          }
-        },
-        {
-          "id": "oldrich-galeja-20",
-          "number": "20",
-          "name": "Jihlava – sídliště",
-          "direction": "vpřed",
-          "stops": [
-            "Náměstí",
-            "Březinova",
-            "Sídliště Sever",
-            "ZŠ",
-            "Konec trasy"
-          ],
-          "schedule": ["06:05", "06:50", "07:35", "08:25", "09:15"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 32,
-            "student": 21,
-            "reduced": 16,
-            "monthly": 380
-          }
-        }
-      ]
-    },
-    {
-      "id": "kyjovice",
-      "name": "Kyjovice",
-      "shortName": "Kyjovice",
-      "type": "local-bus",
-      "city": "Kyjovice",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "kyjovice-1",
-          "number": "1",
-          "name": "Centrum – výšková část",
-          "direction": "vpřed",
-          "stops": [
-            "Centrum",
-            "Obchodní ulice",
-            "ZŠ",
-            "Sídliště",
-            "Vesnická",
-            "Konec trasy"
-          ],
-          "schedule": ["06:10", "06:58", "07:45", "08:35", "09:30"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 25,
-            "student": 15,
-            "reduced": 10,
-            "monthly": 300
-          }
-        }
-      ]
-    },
-    {
-      "id": "aranea",
-      "name": "ARANEA",
-      "shortName": "ARANEA",
-      "type": "regional-bus",
-      "city": "Gryfice",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "aranea-1",
-          "number": "1",
-          "name": "Gryfice – centrum – sídliště",
-          "direction": "vpřed",
-          "stops": [
-            "Náměstí",
-            "Městský úřad",
-            "Sídliště A",
-            "Sídliště B",
-            "Konec trasy"
-          ],
-          "schedule": ["05:50", "06:30", "07:20", "08:00", "09:10"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 28,
-            "student": 18,
-            "reduced": 12,
-            "monthly": 320
-          }
-        }
-      ]
-    },
-    {
-      "id": "pks-gryfice",
-      "name": "PKS Gryfice",
-      "shortName": "PKS Gryfice",
-      "type": "regional-bus",
-      "city": "Gryfice",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "pks-gryfice-10",
-          "number": "10",
-          "name": "Město – okolní obce",
-          "direction": "vpřed",
-          "stops": [
-            "Pošta",
-            "ZŠ",
-            "Obchodní centrum",
-            "Lužany",
-            "Mikulovice",
-            "Konec trasy"
-          ],
-          "schedule": ["06:00", "06:55", "07:50", "08:40", "09:35"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 35,
-            "student": 22,
-            "reduced": 18,
-            "monthly": 400
-          }
-        }
-      ]
-    },
-    {
-      "id": "csad-liberec",
-      "name": "ČSAD Liberec",
-      "shortName": "ČSAD Liberec",
-      "type": "regional-bus",
-      "city": "Liberec",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "csad-liberec-2",
-          "number": "2",
-          "name": "Liberec – městský okruh",
-          "direction": "vpřed",
-          "stops": [
-            "Centrum",
-            "Městské divadlo",
-            "Nádražní",
-            "Sídliště",
-            "Lesní cesta",
-            "Konec trasy"
-          ],
-          "schedule": ["05:40", "06:25", "07:15", "08:05", "09:00"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 30,
-            "student": 18,
-            "reduced": 14,
-            "monthly": 340
-          }
+          "tariffs": {"normal": 30, "student": 20, "reduced": 15, "monthly": 350}
         }
       ]
     },
@@ -383,216 +443,10 @@
           "number": "143",
           "name": "Praha – sídliště – centrum",
           "direction": "vpřed",
-          "stops": [
-            "Muzeum",
-            "Národní třída",
-            "Bílá hora",
-            "Sídliště",
-            "Konec trasy"
-          ],
+          "stops": ["Muzeum", "Národní třída", "Bílá hora", "Sídliště", "Konec trasy"],
           "schedule": ["05:42", "06:10", "06:52", "07:35", "08:20"],
           "vehicleType": "bus",
-          "tariffs": {
-            "normal": 40,
-            "student": 25,
-            "reduced": 18,
-            "monthly": 1000
-          }
-        }
-      ]
-    },
-    {
-      "id": "iveco-czech-republic",
-      "name": "Iveco Czech Republic",
-      "shortName": "Iveco",
-      "type": "coach",
-      "city": "Praha",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "iveco-1",
-          "number": "1",
-          "name": "Business transfer / pracovní přeprava",
-          "direction": "vpřed",
-          "stops": [
-            "Výjezdové místo",
-            "Firma A",
-            "Kancelář",
-            "Distribuční centrum",
-            "Konec trasy"
-          ],
-          "schedule": ["06:00", "07:00", "08:00", "09:00", "10:00"],
-          "vehicleType": "coach",
-          "tariffs": {
-            "normal": 60,
-            "student": 35,
-            "reduced": 25,
-            "monthly": 0
-          }
-        }
-      ]
-    },
-    {
-      "id": "arriva-morava",
-      "name": "ARRIVA MORAVA",
-      "shortName": "ARRIVA",
-      "type": "regional-bus",
-      "city": "Olomouc",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "arriva-morava-204",
-          "number": "204",
-          "name": "Olomouc – Křelov",
-          "direction": "vpřed",
-          "stops": [
-            "Olomouc, Hlavní nádraží",
-            "Cyrilometodějská",
-            "Smetanova",
-            "Náměstí 8. května",
-            "Univerzitní kampus",
-            "Přerovská",
-            "Křelov"
-          ],
-          "schedule": ["05:45", "06:20", "07:05", "08:00", "08:50", "09:40", "10:30"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 30,
-            "student": 20,
-            "reduced": 15,
-            "monthly": 500
-          }
-        }
-      ]
-    },
-    {
-      "id": "dp-ostrava",
-      "name": "Dopravní podnik Ostrava",
-      "shortName": "DP Ostrava",
-      "type": "city-bus",
-      "city": "Ostrava",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "dp-ostrava-20",
-          "number": "20",
-          "name": "Ostrava – Poruba",
-          "direction": "vpřed",
-          "stops": [
-            "Náměstí Republiky",
-            "Hlavní nádraží",
-            "Moravská Ostrava",
-            "Muzeum",
-            "Slezská",
-            "Vítkovice",
-            "Poruba",
-            "Černá louka"
-          ],
-          "schedule": ["05:40", "06:15", "06:55", "07:35", "08:15", "09:00", "09:50", "10:35"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 30,
-            "student": 20,
-            "reduced": 15,
-            "monthly": 500
-          }
-        }
-      ]
-    },
-    {
-      "id": "dp-usti",
-      "name": "DP města Ústí nad Labem",
-      "shortName": "DP Ústí",
-      "type": "city-bus",
-      "city": "Ústí nad Labem",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "dp-usti-1",
-          "number": "1",
-          "name": "Ústí – Centrum",
-          "direction": "vpřed",
-          "stops": [
-            "Náměstí Republiky",
-            "Větrník",
-            "Muzeum",
-            "Kostelní náměstí",
-            "Nádražní",
-            "Předměstí",
-            "Krupka"
-          ],
-          "schedule": ["05:45", "06:20", "07:00", "07:45", "08:35", "09:20", "10:10"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 28,
-            "student": 18,
-            "reduced": 12,
-            "monthly": 360
-          }
-        }
-      ]
-    },
-    {
-      "id": "dp-decin",
-      "name": "DP města Děčína",
-      "shortName": "DP Děčín",
-      "type": "city-bus",
-      "city": "Děčín",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "dp-decin-1",
-          "number": "1",
-          "name": "Děčín – městský okruh",
-          "direction": "vpřed",
-          "stops": [
-            "Nádražní",
-            "Městské divadlo",
-            "Dlouhá",
-            "Podhorská",
-            "Děčínský park",
-            "Březiny"
-          ],
-          "schedule": ["05:55", "06:35", "07:20", "08:10", "09:00", "09:50"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 30,
-            "student": 18,
-            "reduced": 14,
-            "monthly": 340
-          }
-        }
-      ]
-    },
-    {
-      "id": "interline-liberec",
-      "name": "Inter Line Liberec",
-      "shortName": "Inter Line",
-      "type": "city-bus",
-      "city": "Liberec",
-      "country": "CZ",
-      "routes": [
-        {
-          "id": "interline-liberec-1",
-          "number": "1",
-          "name": "Liberec – centrum",
-          "direction": "vpřed",
-          "stops": [
-            "Centrum",
-            "Městský park",
-            "Nádražní",
-            "Jablonecká",
-            "Kříž",
-            "Riegrova"
-          ],
-          "schedule": ["05:35", "06:20", "07:10", "08:00", "08:50", "09:40"],
-          "vehicleType": "bus",
-          "tariffs": {
-            "normal": 28,
-            "student": 18,
-            "reduced": 12,
-            "monthly": 320
-          }
+          "tariffs": {"normal": 40, "student": 25, "reduced": 18, "monthly": 1000}
         }
       ]
     }
